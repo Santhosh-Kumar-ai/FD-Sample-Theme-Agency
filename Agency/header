@@ -1,0 +1,89 @@
+<header class="container-fluid px-0 fw-nav-wrapper fixed-top">
+  <section class="bg-light container-fluid">
+
+<!-- IF ELSE for logged in or not -->
+{% if portal.user %}
+    
+{% else %}
+<style>
+/* Desktop */
+@media (min-width: 1200px){
+.col-xl-3 {
+    flex: 0 0 auto;
+    width: 35%;
+}
+}
+</style>
+{% endif %}
+    <div class="container">
+      {% element 'link' %}
+       {
+         "url": "#fw-main-content",
+         "class": "visually-hidden visually-hidden-focusable p-8 my-12 btn btn-outline-primary",
+         "content": "{{ 'portal_translations.header.skip_content' | t }}"
+       }
+      {% endelement %}
+    </div>
+  </section>
+
+  {% if  portal.current_page != "csat_survey" %}
+    <section class="container">
+      <nav class="navbar navbar-expand-xl navbar-light px-0 py-8 pt-xl-4 pb-xl-0">
+        {% element 'header/logo' %}
+         {
+          "linkback_url": "{{ portal.linkback_url }}",
+          "logo_url": "{{ portal.logo_url }}"
+         }
+        {% endelement %}
+        {% element 'hamburger' %}{}{% endelement %}
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mt-64 mt-xl-0">
+            <li class="nav-item no-hover">
+             <a id="" href="/support/tickets/new" class="btn fw-secondary-button">GET HELP NOW</a>
+            </li>
+            {% if portal.user %}
+           <li class="nav-item {% if tab.tab_type == portal.current_tab %}active{% endif %}">
+                <a href="/support/tickets" class="nav-link">
+                  <span class="d-md-none icon-{{tab.tab_type}}"></span> My Tickets
+                </a>
+              </li>
+             <li class="nav-item {% if tab.tab_type == portal.current_tab %}active{% endif %}">
+                <a href="/support/solutions" class="nav-link">
+                  <span class="d-md-none icon-{{tab.tab_type}}"></span> Solutions
+                </a>
+              </li>
+            <li class="nav-item {% if tab.tab_type == portal.current_tab %}active{% endif %}">
+                <a href="/support/discussions" class="nav-link">
+                  <span class="d-md-none icon-{{tab.tab_type}}"></span> Discussions
+                </a>
+              </li>
+             <li class="nav-item {% if tab.tab_type == portal.current_tab %}active{% endif %}">
+                <a href="/support/profile/edit" class="nav-link">
+                  <span class="d-md-none icon-{{tab.tab_type}}"></span> Profile
+                </a>
+              </li>
+            {% else %}
+            <li class="nav-item {% if tab.tab_type == portal.current_tab %}active{% endif %}">
+                <a href="/support/login" class="nav-link">
+                  <span class="d-md-none icon-{{tab.tab_type}}"></span> LOGIN
+                </a>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <div class="nav-overlay d-none"></div>
+  {% else %}
+    <section class="container">
+      <nav class="navbar navbar-expand-xl navbar-light px-0 py-16 pt-xl-4 pb-xl-0">
+        {% element 'header/logo' %}
+        {
+         "logo_url": "{{ portal.logo_url }}"
+        }
+        {% endelement %}
+      </nav>
+    </section>
+  {% endif %}
+</header>

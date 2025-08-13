@@ -1,0 +1,17 @@
+{% if  portal.current_page != 'csat_survey' %}
+	<footer class="footer rounded-6">
+		<nav style="margin-top:23px;" class="footer-links page no-padding">
+			{% if portal.tabs.size > 0 %}
+                <a href="/support/tickets/new"  class="{% if tab.tab_type == portal.current_tab %}{% if  topic.id != forum topic id goes here %}active{% endif %}{% endif %}">Submit a Ticket</a>
+					<a href="/support/home" id="colored_link" class="{% if tab.tab_type == portal.current_tab %}{% if  topic.id != forum topic id goes here %}active{% endif %}{% endif %}">Support Home</a>
+                  <a href="/support/profile/edit" id="colored_link" class="{% if tab.tab_type == portal.current_tab %}{% if  topic.id != forum topic id goes here %}active{% endif %}{% endif %}">Account</a>
+          <a href="/support/solutions" id="colored_link" class="{% if tab.tab_type == portal.current_tab %}{% if  topic.id != forum topic id goes here %}active{% endif %}{% endif %}">WordPress Tips</a>
+			{% endif %}
+			{{ portal | link_to_privacy_policy }}
+			{{ portal | link_to_cookie_law }}
+		</nav>
+      <br/>
+      <a href="https://portal.wpfixit.com/"><img src="https://www.wpfixit.com/wp-content/uploads/2024/03/samp-logo.png" class="footer-logo"></a>
+      </footer>
+	{{ portal | portal_copyright }}
+{% endif %}

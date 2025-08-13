@@ -1,0 +1,7 @@
+{{header}}
+{{ content_for_layout }}
+<!--<main class="fw-main-wrapper" id="fw-main-content">
+  
+</main>-->
+
+{{footer}}

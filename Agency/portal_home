@@ -1,0 +1,139 @@
+<style>
+  body.portal.portal--light {
+    background: linear-gradient(120deg, rgba(70,96,115,0.9) 0%,rgba(70,96,115,0.9) 100%),url(https://www.wpfixit.com/wp-content/uploads/2019/08/new-bg.jpg);
+    background-size: cover;
+}
+  section.container-fluid.px-0.fw-helpcenter.mb-md-n64 {
+    background: transparent;
+}
+</style>
+{% if portal.current_tab and portal.current_tab == "home" %}
+    <section>
+      {{ page_message }}
+    </section>
+    <section class="container-fluid px-0 fw-helpcenter mb-md-n64">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 col-lg-6 mx-auto">
+            {% if portal.user %}
+            <h1 style="color:#fff">Welcome back <span style="color:#f99568;font-size:48px;font-weight: 400;text-transform:capitalize;">{{ portal.user.name | h}}</span></h1><br>
+           <div style="margin-bottom:15px;margin-top:-33px;">
+            <span style="font-size:23px;font-weight: 400">Use the box below to search your support tickets</span>
+           </div>
+            {% else %}
+             <h1 style="color:#fff">Welcome to our support portal</h1><br>
+           <div style="margin-bottom:15px">
+            <span style="font-size:23px;font-weight: 400">Make a selection below to get support</span>
+           </div>
+            {% endif %}
+            {{ portal | search_element: search_text }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+<section class="container-fluid px-0 mt-16">
+<div class="container">
+<div class="row justify-content-center">
+            <div class="col-md-6 col-xl-3 mb-8">
+              <a class="card fw-horizontal" href="/support/tickets" aria-label="View" all="" tickets="">
+                <div class="col-3 px-0 my-auto text-center">
+                  <div class="fw-category-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><style>.cls-1{fill:#fff;opacity:0.01;}.cls-2,.cls-3{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}.cls-2{stroke:#475867;}.cls-3{stroke:#00a886;}</style></defs><g id="White_BG" data-name="White BG"><rect class="cls-1" width="64" height="64"></rect></g><g id="Artwork"><path class="cls-2" d="M5,27.83V11A6.08,6.08,0,0,1,11.06,5H48.91A6.07,6.07,0,0,1,55,11V27.83"></path><path class="cls-2" d="M5,27.59V17A6.08,6.08,0,0,1,11.06,11H48.91A6.08,6.08,0,0,1,55,17V27.59"></path><path class="cls-2" d="M35.1,52.07h-24A6.08,6.08,0,0,1,5,46V39.81a5,5,0,0,0,0-10V23A6.07,6.07,0,0,1,11.05,17H48.9A6.07,6.07,0,0,1,55,23v6.79h0a5,5,0,0,0-5,4.56"></path><path class="cls-2" d="M34.57,43.1h-13a4,4,0,0,1-4-4v-8a4,4,0,0,1,4-4h18a4,4,0,0,1,4,4v2.95"></path><circle class="cls-3" cx="46.58" cy="46.6" r="12.43"></circle><path class="cls-3" d="M55.67,47.3a11.24,11.24,0,0,1-18,0,11.22,11.22,0,0,1,18,0Z"></path><path class="cls-3" d="M50.29,46a3.62,3.62,0,1,1-5.65-3,11.59,11.59,0,0,1,4.07,0A3.6,3.6,0,0,1,50.29,46Z"></path></g></svg>
+                  </div>
+                </div>
+                <div class="card-body col-9">
+                  <h2 class="mt-0 card-title fs-18 line-clamp-2">View All Your Support Tickets</h2>
+                  <p class="line-clamp-3">View all current and past support tickets you created on this portal</p>
+                </div>
+              </a>
+            </div>
+          
+            <div class="col-md-6 col-xl-3 mb-8">
+              <a class="card fw-horizontal" href="/support/tickets/new" aria-label="Submit" a="" ticket="">
+                <div class="col-3 px-0 my-auto text-center">
+                  <div class="fw-category-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><style>.cls-1{fill:#fff;opacity:0.01;}.cls-2,.cls-3{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}.cls-2{stroke:#475867;}.cls-3{stroke:#00a886;}</style></defs><g id="White_BG" data-name="White BG"><rect class="cls-1" width="64" height="64"></rect></g><g id="Artwork"><circle class="cls-2" cx="20.96" cy="22.89" r="7.95"></circle><path class="cls-2" d="M5.05,51A15.91,15.91,0,0,1,22,35.12c8.45.55,14.84,8,14.84,16.42V55.8A3.18,3.18,0,0,1,33.68,59H8.23A3.18,3.18,0,0,1,5.05,55.8Z"></path><path class="cls-3" d="M37.86,23.4A11.63,11.63,0,1,1,40.38,26l-4,1.49Z"></path><line class="cls-3" x1="47.43" y1="11.11" x2="47.43" y2="17.11"></line><line class="cls-3" x1="47.43" y1="20.75" x2="47.43" y2="21.75"></line></g></svg>
+                  </div>
+                </div>
+                <div class="card-body col-9">
+                  <h2 class="mt-0 card-title fs-18 line-clamp-2">Submit a Support Ticket</h2>
+                  <p class="line-clamp-3">Describe the website help you need by filling in the support ticket form</p>
+                </div>
+              </a>
+            </div>
+      </div>
+      <br>
+<div class="row justify-content-center">
+ <div class="col-md-6 col-xl-3 mb-8">
+  <a class="card fw-horizontal" href="/support/solutions" aria-label="Suolutions">
+    <div class="col-3 px-0 my-auto text-center">
+      <div class="fw-category-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+          <defs>
+            <style>
+              .cls-1{fill:#fff;opacity:0.01;}
+              .cls-2,.cls-3{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}
+              .cls-2{stroke:#475867;}
+              .cls-3{stroke:#00a886;}
+            </style>
+          </defs>
+          <g id="White_BG" data-name="White BG">
+            <rect class="cls-1" width="64" height="64"></rect>
+          </g>
+          <g id="Lightbulb">
+            <!-- Lightbulb outline -->
+            <path class="cls-2" d="M32 8C21.95 8 14 15.95 14 26c0 6.24 3.46 11.73 8.59 14.56V46a2 2 0 0 0 2 2h15.83a2 2 0 0 0 2-2v-5.44C46.54 37.73 50 32.24 50 26 50 15.95 42.05 8 32 8z"></path>
+            <!-- Light rays -->
+            <line class="cls-3" x1="32" y1="2" x2="32" y2="6"></line>
+            <line class="cls-3" x1="50.93" y1="13.07" x2="47.59" y2="16.41"></line>
+            <line class="cls-3" x1="61" y1="32" x2="57" y2="32"></line>
+            <line class="cls-3" x1="50.93" y1="50.93" x2="47.59" y2="47.59"></line>
+            <line class="cls-3" x1="32" y1="61" x2="32" y2="57"></line>
+            <line class="cls-3" x1="13.07" y1="50.93" x2="16.41" y2="47.59"></line>
+            <line class="cls-3" x1="3" y1="32" x2="7" y2="32"></line>
+            <line class="cls-3" x1="13.07" y1="13.07" x2="16.41" y2="16.41"></line>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="card-body col-9">
+      <h2 class="mt-0 card-title fs-18 line-clamp-2">Support Soltions</h2>
+      <p class="line-clamp-3">Some resources to gain more insight on the help you need.</p>
+    </div>
+  </a>
+</div>
+<div class="col-md-6 col-xl-3 mb-8">
+  <a class="card fw-horizontal" href="/support/discussions" aria-label="Submit a ticket">
+    <div class="col-3 px-0 my-auto text-center">
+      <div class="fw-category-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+          <defs>
+            <style>
+              .cls-1{fill:#fff;opacity:0.01;}
+              .cls-2,.cls-3{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}
+              .cls-2{stroke:#475867;}
+              .cls-3{stroke:#00a886;}
+            </style>
+          </defs>
+          <g id="White_BG" data-name="White BG">
+            <rect class="cls-1" width="64" height="64"></rect>
+          </g>
+          <g id="ChatBubble">
+            <!-- Outer chat bubble -->
+            <path class="cls-2" d="M32 6C19.85 6 10 14.6 10 25.5 10 34.45 17.23 41.73 26.43 42.88l.35 7.38 8.05-5.53C50.1 42.05 54 35.23 54 25.5 54 14.6 44.15 6 32 6z"></path>
+            <!-- Inner smaller chat bubble -->
+            <path class="cls-3" d="M18 28c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm10 0c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm10 0c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"></path>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="card-body col-9">
+      <h2 class="mt-0 card-title fs-18 line-clamp-2">View & Join a Discussion</h2>
+      <p class="line-clamp-3">Engage with others by viewing and joining ongoing discussions.</p>
+    </div>
+  </a>
+</div>
+</div>
+    </div>
+  </section>

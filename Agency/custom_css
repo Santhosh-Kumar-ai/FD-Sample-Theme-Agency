@@ -1,0 +1,184 @@
+@media only screen and (min-width: 880px) {
+  .col-xl-3 {
+    width: 33% !important;
+}
+  section.container-fluid.px-0.fw-page-title-wrapper {
+    height: 177px;
+  }
+  .fw-helpcenter {
+    padding: 4.375rem 0;
+}
+}
+#new-ticket-cc-toggle {
+	display: none;
+}
+span.me-4.fw-status-badge.fw-status-badge__open, span.me-4.fw-status-badge.fw-status-badge__closed, span.me-4.fw-status-badge.fw-status-badge__resolved, span.me-4.fw-status-badge.fw-status-badge__custom-status, span.me-4.fw-status-badge.fw-status-badge__pending {
+    font-size: 16px;
+    margin: 10px;
+}
+.no-info {
+    font-size: 23px;
+    font-weight: 900;
+}
+.fw-category-wrapper .fw-articles li a:hover, a.card.fw-horizontal:hover {
+    background: #FFFF97;
+}
+ol.breadcrumb {
+    padding: 10px;
+}
+.fw-autocomplete-header {
+    display: none;
+}
+.navbar .navbar-collapse .nav-item:not(.no-hover):not(.active):hover {
+    background-color: transparent !important;
+}
+.pb-24.semi-bold, label.form-label {
+    text-transform: capitalize;
+}
+a.nav-link {
+font-size: 18px;
+}
+a.nav-link:hover {
+    color: #f99568 !important;
+}
+body.portal.portal--light {
+    margin-top: 100px;
+}
+.text-center.fw-forget-section {
+    display: none;
+}
+div#notice {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18px;
+}
+section.container-fluid.px-0.fw-page-title-wrapper {
+    background: linear-gradient(120deg, rgba(70,96,115,0.9) 0%,rgba(70,96,115,0.9) 100%),url(https://www.wpfixit.com/wp-content/uploads/2019/08/new-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.footer {
+    display: none;
+}
+p.line-clamp-2 {
+    font-size: 18px;
+}
+p.small.line-clamp-2 {
+    font-size: 14px;
+    color: #3b657d;
+}
+button#btn-close-ticket, button.btn.fw-secondary-button.fw-remove-image-button, button.btn.fw-primary-button.ms-8.profile-submit-button{
+    text-transform: capitalize;
+  background:#efefef !important;
+  color:#3b657d;
+}
+button#btn-close-ticket:hover, button.btn.fw-secondary-button.fw-remove-image-button:hover {
+  background:#00D78B !important;
+  color:#fff !important;
+}
+.fw-wrapper-shadow .fw-closed-info {
+    background-color: #FFFF97;
+    color: #000;
+    font-size: 18px;
+}
+section.status-form.tickets-filters {
+    margin-top: -33px;
+}
+button#fw-ticket-export-button {
+    display: none;
+}
+.fw-loginform-wrapper .fw-form-section .form p {
+    margin-bottom: 2rem;
+    font-size: 18px;
+}
+a.card.fw-horizontal {
+    background: #efe;
+}
+button.btn.fw-primary-button.btn-block.w-100.login-button, button.btn.fw-primary-button.btn-block.w-100.signup-button {
+    background: #f99568;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 23px;
+}
+button.btn.fw-primary-button.btn-block.w-100.login-button:hover, button.btn.fw-primary-button.btn-block.w-100.signup-button:hover {
+    background: #00D78B;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 23px;
+}
+
+
+button#helpdesk_ticket_submit:hover{    background: #00D78B;
+    color: #fff;
+    text-transform: uppercase;}
+
+
+.fw-main-wrapper {
+    margin-top: 6rem;
+}
+.form-group.helpdesk_ticket_email {
+    display: none;
+}
+button#btn-add-people {
+    display: none;
+}
+main#fw-main-content {
+    background: #efefef;
+}
+body.portal.portal--light {
+    background: #efefef;
+}
+.fw-searchbar-wrapper.fw-sticky {
+    top: 0px !important;
+    margin-top: -27px;
+}
+.fw-loginform-wrapper .fw-form-section .form {
+    margin-top: 33px;
+}
+a.nav-link {
+    text-transform: capitalize;
+}
+body .fw-secondary-button {
+    background-color: #f99568;
+    color: #fff;
+    border-color: #cfd7df;
+}
+body .fw-secondary-button:hover {
+    background-color: #00D78B;
+    color: #fff;
+    border-color: #cfd7df;
+}
+a.btn.fw-secondary-button {
+    text-transform: uppercase;
+}
+h1.fw-page-title {
+    text-transform: capitalize;
+}
+.fw-searchbar-wrapper {
+    background-color: #00D78B;
+}
+li.nav-item.active {
+    background: transparent !important;
+}
+a.nav-link {
+    color: #000 !important;
+}
+.fw-page-title-wrapper p {
+    color: #fff;
+    opacity: 10;
+}
+.fw-wrapper-shadow .fw-content--single-article div, .fw-wrapper-shadow .fw-content--single-article li, .fw-wrapper-shadow .fw-content--single-article p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0;
+}
+.fr-wrapper.show-placeholder {
+    height: 233px !important;
+}
+.fw-helpdesk-ticket-forms-dropdown-container {
+    margin: 0px;
+}
+a.dropdown-item {
+    text-transform: capitalize;
+}
